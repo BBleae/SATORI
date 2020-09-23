@@ -1,0 +1,22 @@
+{
+  "name": "screeps-satori",
+  "version": "0.0.1",
+  "scripts": {
+    "build": "bsb -clean-world && bsb -make-world && grunt replace",
+    "clean": "bsb -clean-world",
+    "start": "bsb -make-world -w",
+    "deploy": "bsb -clean-world && bsb -make-world && grunt"
+  },
+  "keywords": [
+    "rescript",
+    "screeps"
+  ],
+  "author": "BBleae",
+  "license": "MIT",
+  "devDependencies": {
+    "bs-platform": "*",
+    "grunt": "^1.3.0",
+    "grunt-screeps": "^1.4.0",
+    "grunt-text-replace": "^0.4.0"
+  }
+}
