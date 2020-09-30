@@ -1,9 +1,10 @@
-open Strs
+open Roles
+open Screeps
+
+let creeps: array<string> = Js.Obj.keys(Game.creeps)
 
 let loop = _ => {
-  let str = Strs.hello ++ %raw(`Game.time`)
-  Js.log(str)
+  Belt.Array.map(creeps, creep =>
+    Roles.roleRun[Game.creeps[creep]["memory"]["role"]](Game.creeps[creep])
+  )
 }
-let x = 1
-
-let y = 2
